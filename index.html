@@ -9,14 +9,12 @@
 
 <body>
     <header class="top-header">
-        <div>
+        <div class="title-about">
             <h1>License</h1>
             <a href="#" class="nav-link" onclick="toggleSection('about')">About</a>
         </div>
 
-        <!-- 10 ASCII cars... -->
         <div class="car-row">
-            <!-- Car #1 -> toggles DJGALLO section -->
             <div class="car-ascii car-1" onclick="toggleSection('section1')">
                 <pre>
  ______
@@ -25,7 +23,6 @@
 =`-(_)--(_)-'
         </pre>
             </div>
-            <!-- Car #2 -->
             <div class="car-ascii car-2" onclick="toggleSection('section2')">
                 <pre>
  ______
@@ -34,7 +31,6 @@
 =`-(_)--(_)-'
         </pre>
             </div>
-            <!-- Car #3 -->
             <div class="car-ascii car-3" onclick="toggleSection('section3')">
                 <pre>
  ______
@@ -43,7 +39,6 @@
 =`-(_)--(_)-'
         </pre>
             </div>
-            <!-- Car #4 -->
             <div class="car-ascii car-4" onclick="toggleSection('section4')">
                 <pre>
  ______
@@ -52,7 +47,6 @@
 =`-(_)--(_)-'
         </pre>
             </div>
-            <!-- Car #5 -->
             <div class="car-ascii car-5" onclick="toggleSection('section5')">
                 <pre>
  ______
@@ -61,7 +55,6 @@
 =`-(_)--(_)-'
         </pre>
             </div>
-            <!-- Car #6 -->
             <div class="car-ascii car-6" onclick="toggleSection('section6')">
                 <pre>
  ______
@@ -70,7 +63,6 @@
 =`-(_)--(_)-'
         </pre>
             </div>
-            <!-- Car #7 -->
             <div class="car-ascii car-7" onclick="toggleSection('section7')">
                 <pre>
  ______
@@ -79,7 +71,6 @@
 =`-(_)--(_)-'
         </pre>
             </div>
-            <!-- Car #8 -->
             <div class="car-ascii car-8" onclick="toggleSection('section8')">
                 <pre>
  ______
@@ -88,7 +79,6 @@
 =`-(_)--(_)-'
         </pre>
             </div>
-            <!-- Car #9 -->
             <div class="car-ascii car-9" onclick="toggleSection('section9')">
                 <pre>
  ______
@@ -97,7 +87,6 @@
 =`-(_)--(_)-'
         </pre>
             </div>
-            <!-- Car #10 -->
             <div class="car-ascii car-10" onclick="toggleSection('section10')">
                 <pre>
  ______
@@ -139,7 +128,6 @@
             </div>
         </section>
 
-        <!-- SECTION #2: BRUH87 -->
         <section id="section2" class="content-section" data-visible="false">
             <div class="content-wrapper">
                 <div class="left-column">
@@ -167,7 +155,6 @@
             </div>
         </section>
 
-        <!-- SECTION #3: CHFKEIF -->
         <section id="section3" class="content-section" data-visible="false">
             <div class="content-wrapper">
                 <div class="left-column">
@@ -175,7 +162,7 @@
                         <p>plate: CHFKEIF</p>
                         <p>state: California</p>
                         <p>Brand: Acura</p>
-                        <p>Description: Cheif Keef, the rapper. Probably not actually him.</p>
+                        <p>Description: Cheif Keef.</p>
                         <hr class="info-divider">
                         <p>Encountered: San Francisco</p>
                         <p>Date: July 16, 2022 at 5:48 PM</p>
@@ -195,7 +182,6 @@
             </div>
         </section>
 
-        <!-- SECTION #4: GOD❤️AlX -->
         <section id="section4" class="content-section" data-visible="false">
             <div class="content-wrapper">
                 <div class="left-column">
@@ -223,7 +209,6 @@
             </div>
         </section>
 
-        <!-- SECTION #5: NOWKITH -->
         <section id="section5" class="content-section" data-visible="false">
             <div class="content-wrapper">
                 <div class="left-column">
@@ -255,7 +240,6 @@
             </div>
         </section>
 
-        <!-- SECTION #6: BOSS -->
         <section id="section6" class="content-section" data-visible="false">
             <div class="content-wrapper">
                 <div class="left-column">
@@ -283,7 +267,6 @@
             </div>
         </section>
 
-        <!-- SECTION #7: AG 1 -->
         <section id="section7" class="content-section" data-visible="false">
             <div class="content-wrapper">
                 <div class="left-column">
@@ -311,7 +294,6 @@
             </div>
         </section>
 
-        <!-- SECTION #8: TEENCIE -->
         <section id="section8" class="content-section" data-visible="false">
             <div class="content-wrapper">
                 <div class="left-column">
@@ -339,7 +321,6 @@
             </div>
         </section>
 
-        <!-- SECTION #9: LILALEK -->
         <section id="section9" class="content-section" data-visible="false">
             <div class="content-wrapper">
                 <div class="left-column">
@@ -368,7 +349,6 @@
             </div>
         </section>
 
-        <!-- SECTION #10: CRNBRY -->
         <section id="section10" class="content-section" data-visible="false">
             <div class="content-wrapper">
                 <div class="left-column">
@@ -416,30 +396,25 @@
             </div>
         </section>
     </main>
-
     <!-- code adapted from here: https://stackoverflow.com/questions/64487640/how-to-show-hide-div-onclick -->
     <script>
         function toggleSection(sectionId) {
             const allSections = document.querySelectorAll('.content-section');
-            // Hide them all first
             allSections.forEach(sec => {
                 sec.style.display = 'none';
                 sec.dataset.visible = 'false';
             });
 
             const target = document.getElementById(sectionId);
-            // If the target was already visible, hide it (toggle off)
             if (target.dataset.visible === 'true') {
                 target.style.display = 'none';
                 target.dataset.visible = 'false';
             } else {
-                // Show only the clicked section
                 target.style.display = 'block';
                 target.dataset.visible = 'true';
             }
         }
 
-        // Show first section on page load
         window.addEventListener('DOMContentLoaded', () => {
             toggleSection('section1');
         });
